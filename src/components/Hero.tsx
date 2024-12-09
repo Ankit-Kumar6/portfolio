@@ -6,7 +6,7 @@ import { Code2, Shield, Terminal as TerminalIcon } from 'lucide-react';
 const commands = [
   { cmd: 'whoami', output: 'Ankit Kumar - gr33nwzrd' },
   { cmd: 'man gr33nwzrd', output: 'Reverse Engineer & Malware Analyst' },
-  { cmd: './gr33nwzrd -h', output: 'Advanced Static & Dynamic Analysis | Malware Research' },
+  { cmd: './gr33nwzrd -h', output: 'Advanced Static & Dynamic Analysis of Malware files and binaries' },
 ];
 
 export const Hero: React.FC = () => {
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
         <h1 className="text-4xl font-bold text-[#D4A373] mb-2 font-['JetBrains_Mono']">
           gr33nwzrd
         </h1>
-        <p className="text-[#8B7355] font-['Fira_Code']">Reverse Engineering & Malware Analysis</p>
+        <p className="text-[#8B7355] font-['Fira_Code']">An cybersecurity enthusiast who is passionate about Reverse Engineering, Malware Analysis.</p>
       </motion.div>
 
       <Terminal className="w-full max-w-2xl">
