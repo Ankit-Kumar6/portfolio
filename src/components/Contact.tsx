@@ -2,6 +2,7 @@ import React from 'react';
 import { Terminal } from './Terminal';
 import { motion } from 'framer-motion';
 import { Github, Twitter, Linkedin, Mail, BookOpen, Send } from 'lucide-react';
+import { ContactForm } from './ContactForm';
 
 const socialLinks = [
   {
@@ -52,7 +53,7 @@ export const Contact: React.FC = () => {
             <Terminal title="social_links.sh">
               <div className="space-y-4">
                 <div className="flex items-center mb-4">
-                  <Send className="w-6 h-6 text-[#D4A373] mr-3" />
+                  <Github className="w-6 h-6 text-[#D4A373] mr-3" />
                   <span className="text-lg font-bold">Connect</span>
                 </div>
                 {socialLinks.map((link, index) => (
@@ -77,43 +78,7 @@ export const Contact: React.FC = () => {
             viewport={{ once: true }}
           >
             <Terminal title="contact_form.sh">
-              <div className="space-y-4">
-                <div className="flex items-center mb-4">
-                  <Mail className="w-6 h-6 text-[#D4A373] mr-3" />
-                  <span className="text-lg font-bold">Message</span>
-                </div>
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-[#8B7355] mb-2">Name:</label>
-                    <input
-                      type="text"
-                      className="w-full bg-[#2D2419] border border-[#8B7355] rounded p-2 text-[#FAEDCD] focus:outline-none focus:border-[#D4A373]"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[#8B7355] mb-2">Email:</label>
-                    <input
-                      type="email"
-                      className="w-full bg-[#2D2419] border border-[#8B7355] rounded p-2 text-[#FAEDCD] focus:outline-none focus:border-[#D4A373]"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[#8B7355] mb-2">Message:</label>
-                    <textarea
-                      className="w-full bg-[#2D2419] border border-[#8B7355] rounded p-2 text-[#FAEDCD] focus:outline-none focus:border-[#D4A373] h-32"
-                      placeholder="Your message here..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-[#2D2419] border border-[#D4A373] text-[#D4A373] py-2 rounded hover:bg-[#D4A373] hover:text-[#1A1814] transition-colors"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </Terminal>
           </motion.div>
         </div>
