@@ -20,7 +20,7 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'https://linkedin.com/in/ankit-kumar-p-582764272',
+    url: 'https://linkedin.com/in/gr33nwzrd',
     username: 'Ankit Kumar'
   },
   {
