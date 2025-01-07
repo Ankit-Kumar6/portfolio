@@ -15,7 +15,7 @@ export interface BlogPost {
   id: string;
   title: string;
   date: string;
-  category: 'reverse-engineering' | 'malware-analysis' | 'zero-day' | 'tool-development';
+  category: 'reverse-engineering' | 'malware-analysis' | 'zero-day' | 'tool-development' | 'malware-dev';
   content: string;
   gitUrl?: string;
   snippets?: Array<{

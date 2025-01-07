@@ -1,7 +1,7 @@
 import React from 'react';
 import { Terminal } from './Terminal';
 import { motion } from 'framer-motion';
-import { BookOpen, Calendar, Tag } from 'lucide-react';
+import { BookOpen, Calendar, Tag, GitBranch } from 'lucide-react';
 import type { BlogPost } from '../types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -11,7 +11,7 @@ const posts: BlogPost[] = [
     id: 'malware-dev',
     title: 'Enumerating Process and Querying Memory',
     date: '2025-01-6',
-    category: 'malware-analysis',
+    category: 'malware-dev',
     content: 'Enumerating the running process, listing them and then quering their memory region, based on a filter that only allows the process with RWX protection.',
     gitUrl: 'https://github.com/gr33nwzrd/NIL',
     snippets: [
@@ -75,9 +75,10 @@ if (EnumProcesses(Proc, sizeof(Proc), &MemtoStorePID)) {
 
 const categoryColors = {
   'reverse-engineering': 'text-yellow-400',
-  'malware-analysis': 'text-red-400',
+  'malware-analysis': 'text-green-400',
+  'malware-dev': 'text-red-400',
   'zero-day': 'text-purple-400',
-  'tool-development': 'text-blue-400'
+  'tool-development': 'text-blue-400',
 };
 
 export const Blog: React.FC = () => {
@@ -135,13 +136,25 @@ export const Blog: React.FC = () => {
                           background: '#2D2419',
                           padding: '1rem',
                           borderRadius: '0.5rem',
-                          fontSize: '0.9rem'
+                          fontSize: '0.9rem',
                         }}
                       >
                         {snippet.code}
                       </SyntaxHighlighter>
                     </div>
                   ))}
+
+                  {post.gitUrl && (
+                    <a
+                      href={post.gitUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 text-[#00FF00] hover:text-[#FAEDCD] transition-colors mt-2"
+                    >
+                      <GitBranch className="w-4 h-4" />
+                      <span>View Source</span>
+                    </a>
+                  )}
                 </div>
               </Terminal>
             </motion.div>
