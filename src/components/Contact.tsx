@@ -8,7 +8,7 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: Github,
-    url: 'https://github.com/Ankit-Kumar6',
+    url: 'https://github.com/gr33nwzrd',
     username: 'Ankit Kumar'
   },
   {

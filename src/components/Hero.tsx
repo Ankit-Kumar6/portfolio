@@ -5,8 +5,8 @@ import { Code2, Shield, Terminal as TerminalIcon } from 'lucide-react';
 
 const commands = [
   { cmd: 'whoami', output: 'Ankit Kumar - gr33nwzrd' },
-  { cmd: 'man gr33nwzrd', output: 'Reverse Engineer & Malware Analyst | CTF Player' },
-  { cmd: './gr33nwzrd -h', output: 'Advanced Static & Dynamic Analysis of Malware files and binaries' },
+  { cmd: 'man gr33nwzrd', output: 'Reverse Engineer | Malware Analyst/Devlopment | CTF Player' },
+  { cmd: './gr33nwzrd -h', output: 'Advanced Static & Dynamic Analysis of Malware files and binaries, Developin Malwares' },
 ];
 
 export const Hero: React.FC = () => {

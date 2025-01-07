@@ -30,9 +30,10 @@ const skillCategories = [
     ]
   },
   {
-    title: 'Development',
+    title: 'Malware Development',
     icon: Code2,
     skills: [
+      'Shellcode Injection',
       'Custom Security Tool Development',
       'Automation Script Development',
       'Exploit Development',

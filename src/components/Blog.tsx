@@ -8,6 +8,28 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const posts: BlogPost[] = [
   {
+    id: 'malware-dev',
+    title: 'Enumerating Process and Querying Memory',
+    date: '2025-01-6',
+    category: 'malware-analysis',
+    content: 'Enumerating the running process, listing them and then quering their memory region, based on a filter that only allows the process with RWX protection.',
+    snippets: [
+      {
+        language: 'C++',
+        code: `void ListProcess(){
+        DWORD Proc[1024], MemtoStorePID, totalProc; //Initialize
+
+//Process ID enum
+if (EnumProcesses(Proc, sizeof(Proc), &MemtoStorePID)) {
+    totalProc = MemtoStorePID / sizeof(DWORD);
+    }
+    if (EnumProcessModules(hProc, &hMod, sizeof(hMod), &MemtoStorePID)) {
+    GetModuleBaseNameA(hProc, hMod, ProcName, sizeof(ProcName) / sizeof(CHAR));
+}`
+      }
+    ]
+  },
+  {
     id: 'analyzing-emotet',
     title: 'Analyzing Emotet: Advanced Evasion Techniques',
     date: '2024-03-15',
