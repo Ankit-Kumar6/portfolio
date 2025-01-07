@@ -17,6 +17,7 @@ export interface BlogPost {
   date: string;
   category: 'reverse-engineering' | 'malware-analysis' | 'zero-day' | 'tool-development';
   content: string;
+  gitUrl?: string;
   snippets?: Array<{
     language: string;
     code: string;

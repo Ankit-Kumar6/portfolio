@@ -13,6 +13,7 @@ const posts: BlogPost[] = [
     date: '2025-01-6',
     category: 'malware-analysis',
     content: 'Enumerating the running process, listing them and then quering their memory region, based on a filter that only allows the process with RWX protection.',
+    gitUrl: 'https://github.com/gr33nwzrd/NIL',
     snippets: [
       {
         language: 'C++',
